@@ -1,6 +1,2 @@
-Dados para o banco:
-MariaDb or MySql (TCP/IP)
-usuário: 'root'
-senha:   ''
-porta: 3306
-servidor: localhost | 127.0.0.1 | padrão máquina
+#
+Este é um aplicativo móvel de controle de estagiários desenvolvido em PHP, utilizando a arquitetura MVC (Model-View-Controller). Ele emprega o MySQL como banco de dados para armazenar e gerenciar os dados dos estagiários. O sistema segue o padrão CRUD (Create, Read, Update, Delete) para operações básicas de gerenciamento de dados. A interface do usuário é projetada com o framework Bootstrap, garantindo uma experiência amigável e responsiva em dispositivos móveis.
