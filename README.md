@@ -7,5 +7,5 @@
 ![tela_estagiarios](https://github.com/IsaqueMarley/Controle_Estagiarios_php/assets/116613395/585290cf-bfc2-40dd-8361-ae4f7343dfc4)
 
 # Tela de exibição e cadastro de projetos
-![tela_projetos](https://github.com/IsaqueMarley/Controle_Estagiarios_php/assets/116613395/293978da-6c05-4a57-8ae9-7da3aed9d168)
+....
 
