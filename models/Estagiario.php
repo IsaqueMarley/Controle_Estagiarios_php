@@ -102,9 +102,10 @@ class Estagiario
         $colunas = $this->preparar($this->atributos);
         
         if (!isset($this->id_estagiario)) {
+            echo var_dump($colunas);
         
-            
-            $query = "INSERT INTO estagiario (".implode(', ', array_keys($colunas)).") VALUES (".implode(', ', array_values($colunas)).");";
+               $query = "call AdicionarEstagiario(". implode(',',array_values($colunas)).",@id_estagiario);"  ;
+            //$query = "INSERT INTO estagiario (".implode(', ', array_keys($colunas)).") VALUES (".implode(', ', array_values($colunas)).");";
         } else {
             foreach ($colunas as $key => $value) {
                 if ($key !== 'id_estagiario') {
@@ -216,6 +217,26 @@ class Estagiario
         return false;
     }
 
+    /**
+     * Método para teste de API
+     *  
+     * */
+    public static function testeAPI()
+    {
+        $query = "SELECT *FROM estagiario";
+        $conexao = Conexao::getInstance();
+        $stmt = $conexao->prepare($query);
+        if($stmt->execute()){
+            if($stmt->rowcount()>0){
+                $res = $stmt->fetchObject("estagiario");
+                if($res){
+                    return $res;
+                }
+            }
+        }
+        return false; 
+    }  
+       
      /**
      * Retornar o número de registros
      * @return int|boolean

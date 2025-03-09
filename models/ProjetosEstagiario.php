@@ -120,6 +120,7 @@ class ProjetosEstagiario
         if (!isset($this->id_project_estagiario)) {
 
             $query = "INSERT INTO projetosestagiario (" . implode(', ', array_keys($colunas)) . ") VALUES (" . implode(', ', array_values($colunas)) . ");";
+            echo $query;
         } else {
             foreach ($colunas as $key => $value) {
                 if ($key !== 'id_project_estagiario') {

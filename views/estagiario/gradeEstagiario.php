@@ -1,3 +1,5 @@
+
+
 <h2 class="text-center">ESTAGIÁRIOS</h2>
 <hr>
 <div class="container p-0" >
@@ -13,7 +15,7 @@
     <table id="tabela" class="table table-striped" style="width:100%">
         <thead> 
             <tr>
-                <th class="text-center" >NOME</th>
+                <th class="text-center" >NOM1E</th>
                 <th class="text-center">BOLSA</th>
                 <th class="text-center">AUXÍLIO</th>
                 <th class="text-center">VER</th>

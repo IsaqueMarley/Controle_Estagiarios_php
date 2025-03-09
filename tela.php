@@ -63,7 +63,8 @@ spl_autoload_register(function ($class) {
           unset($parameters['controllers']);
           unset($parameters['method']);
           call_user_func(array($controller, $method), $parameters);
-        } else {
+          } else {
+
           echo "Método não encontrado!";
         }
       } else {

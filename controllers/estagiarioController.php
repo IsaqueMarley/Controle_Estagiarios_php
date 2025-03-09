@@ -10,6 +10,15 @@ class EstagiarioController extends Controller
         $estagiarios = Estagiario::all();
         return $this->view("views/estagiario/gradeEstagiario", ['estagiarios' => $estagiarios]);
     }
+    
+    /**
+     * Função para testar API
+     */
+    public function chamar()
+    {
+        $estagiarios = Estagiario::testeAPI();
+        return $this->view("views/api/visao",['estagiarios' => $estagiarios]);
+    }
 
     /**
      * Mostrar formulário para cadastrar estagiário
@@ -64,7 +73,7 @@ class EstagiarioController extends Controller
 
                     $projetoEstagiario->id_project    = $idProjeto;
                     $projetoEstagiario->id_estagiario = $dado_estagiario->id_estagiario;
-                    $projetoEstagiario->function      = " ";
+                   # $projetoEstagiario->function      = " ";
                     $projetoEstagiario->start_date    = $projeto->start_date;
                     $projetoEstagiario->end_date      = $projeto->end_date;
                     
@@ -136,7 +145,7 @@ class EstagiarioController extends Controller
                 $projetoEstagiario                = new ProjetosEstagiario;
                 $projetoEstagiario->id_project    = $idProjeto;
                 $projetoEstagiario->id_estagiario = $id;
-                $projetoEstagiario->function      = " ";
+               # $projetoEstagiario->function      = " ";
                 $projetoEstagiario->start_date    = $dado_do_projeto->start_date;
                 $projetoEstagiario->end_date      = $dado_do_projeto->end_date;
 

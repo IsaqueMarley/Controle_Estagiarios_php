@@ -1,4 +1,5 @@
 <?php
+
 error_reporting(E_ALL);
 ini_set('display_errors', true);
 
@@ -73,6 +74,11 @@ spl_autoload_register(function ($class) {
                   Pagamentos
                 </a>
               </li>
+              <li>
+                <a href="tela.php?controllers=estagiarioController&method=chamar" class="nav-link p-0 pt-2 text-white">
+                  testeAPI
+                </a>
+              </li>
 
             </ul>
 
@@ -95,6 +101,7 @@ spl_autoload_register(function ($class) {
                   unset($parameters['method']);
                   call_user_func(array($controller, $method), $parameters);
                 } else {
+                 
                   echo "Método não encontrado!";
                 }
               } else {
